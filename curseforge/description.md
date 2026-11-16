@@ -1,7 +1,7 @@
 # Cinematic Azeroth
 
-<!-- Download badge, once the project ID is known (shields.io first; see the project checklist):
-![Downloads](https://img.shields.io/curseforge/dt/<projectID>?logo=curseforge&label=downloads) -->
+<!-- Download badge for CurseForge project 1809957, served by shields.io. -->
+![Downloads](https://img.shields.io/curseforge/dt/1809957?logo=curseforge&label=downloads)
 
 **Press one key and Azeroth becomes a film.** The whole interface and the nameplates disappear, and black letterbox bars slide in from the top and bottom of the screen. Ride through a zone, watch a sunset over the sea, take a flight, take screenshots. Press the key again, or Escape, and everything comes back.
 

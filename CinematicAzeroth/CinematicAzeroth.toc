@@ -8,6 +8,7 @@
 ## AddonCompartmentFunc: CinematicAzeroth_OnAddonCompartmentClick
 ## X-Credits: By Malven31, made with Claude (Anthropic).
 ## X-License: MIT
+## X-Curse-Project-ID: 1809957
 
 Core.lua
 Options.lua

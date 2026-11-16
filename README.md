@@ -1,7 +1,6 @@
 # Cinematic Azeroth
 
-<!-- Download badge, once the CurseForge project exists:
-[![CurseForge downloads](https://img.shields.io/curseforge/dt/<projectID>?logo=curseforge&label=downloads)](https://www.curseforge.com/wow/addons/<slug>) -->
+[![CurseForge downloads](https://img.shields.io/curseforge/dt/1809957?logo=curseforge&label=downloads)](https://www.curseforge.com/projects/1809957)
 
 Press one key and Azeroth becomes a film: the whole interface and the nameplates disappear, and black letterbox bars slide in from the top and bottom of the screen. Press it again, or Escape, and everything comes back.
 
@@ -12,7 +11,7 @@ Made for **World of Warcraft: Forever**.
 
 ## Install
 
-Install it from CurseForge (Forever flavor), or by hand:
+Install it from [CurseForge](https://www.curseforge.com/projects/1809957) (Forever flavor), or by hand:
 
 1. Copy the `CinematicAzeroth` folder into `World of Warcraft\_forever_\Interface\AddOns`.
 2. Restart the game.

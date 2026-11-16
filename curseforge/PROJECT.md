@@ -44,12 +44,13 @@ From CurseForge's moderation policies (<https://support.curseforge.com/support/s
 
 If the description editor has no Markdown mode, open `description.md` in a Markdown preview (VS Code: Ctrl+Shift+V) and copy the rendered text. The formatting comes along.
 
-## Once the project exists
+## Project ID
 
-The project ID is in the "About Project" box of the project page (a number, not the URL slug).
+The project ID is **1809957** (project created 2026-11-16; the ID is in the "About Project" box of the project page).
 
-1. Add `## X-Curse-Project-ID: <id>` to `CinematicAzeroth/CinematicAzeroth.toc`. Without it, the workflow refuses tags and `scripts/release.ps1` refuses to tag.
-2. Uncomment the download badge at the top of `description.md` and `README.md`, with the ID (and the project's URL slug in the README link). It reads "downloads: not found" until CurseForge's public API lists the project, presumably after moderation.
+- It is in `CinematicAzeroth/CinematicAzeroth.toc` as `## X-Curse-Project-ID: 1809957`. Without it, the workflow refuses tags and `scripts/release.ps1` refuses to tag.
+- The top of `description.md` and `README.md` shows the download count, `https://img.shields.io/curseforge/dt/1809957?logo=curseforge&label=downloads`. Until CurseForge's public API lists the project (presumably after moderation), the badge reads "downloads: not found", and then shows the count. The fallback badge service is `https://cf.way2muchnoise.eu/full_1809957_downloads.svg`, which answers with a server error until then.
+- Links to the project use `https://www.curseforge.com/projects/1809957`, which leads to the project page whatever its URL slug.
 
 ## Automatic packaging (set up once)
 
