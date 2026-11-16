@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: Cinematic Azeroth
 ## Author: Malven31
-## Version: 1.0.0
+## Version: 1.0.0-beta1
 ## Notes: One key hides the interface and the nameplates and slides in cinematic letterbox bars. /cinema
 ## SavedVariables: CinematicAzerothDB
 ## IconTexture: Interface\AddOns\CinematicAzeroth\media\icon
