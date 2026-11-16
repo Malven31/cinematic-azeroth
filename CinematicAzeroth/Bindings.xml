@@ -1,0 +1,7 @@
+<Bindings>
+	<!-- Normally never runs: Core.lua redirects every key bound here to Blizzard's TOGGLEUI with an
+	     override binding. This body only runs before that redirect is in place. -->
+	<Binding name="CINEMATICAZEROTH_TOGGLE" category="BINDING_HEADER_CINEMATICAZEROTH">
+		CinematicAzeroth_OnKey()
+	</Binding>
+</Bindings>
