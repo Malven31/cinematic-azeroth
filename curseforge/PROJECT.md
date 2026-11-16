@@ -54,6 +54,8 @@ The project ID is **1809957** (project created 2026-11-16; the ID is in the "Abo
 
 ## Automatic packaging (set up once)
 
+Set up on 2026-11-16: the `CF_API_TOKEN` secret is in the repository.
+
 Files are packaged and uploaded by GitHub when a version tag is pushed: `.github/workflows/release.yml` runs the BigWigs packager, following `.pkgmeta`.
 
 - **The zip** contains `CinematicAzeroth` at its root, with the licence inside it. `.pkgmeta` moves the folder there and leaves out the docs, `curseforge/` and `scripts/`.
