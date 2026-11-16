@@ -14,7 +14,7 @@ Everything the CurseForge project and file upload ask for, ready to paste.
    - A flight master's flight turns cinematic mode on, and landing turns it off.
    - `/cinema watch` turns the diagnostics on and off, and `/cinema debug` saves a snapshot.
 2. **Repository:** `github.com/Malven31/cinematic-azeroth`.
-3. **Visibility:** the Source and Issues links below, and images loaded in the description, only work if the repository is public.
+3. **Visibility:** the repository is public (checked 2026-11-16), so the Source and Issues links below and images loaded in the description work. Keep it public.
 4. **Logo:** [logo.png](logo.png) (512×512, the addon's own). The in-game icon `CinematicAzeroth/media/icon.tga` (64×64) is the same picture. `scripts/make-icon.ps1` draws both.
 5. **Screenshots and animation:** see [gallery/README.md](gallery/README.md).
 
@@ -39,8 +39,8 @@ From CurseForge's moderation policies (<https://support.curseforge.com/support/s
 | Category | HUDs, plus Roleplay or Miscellaneous if offered |
 | Licence | MIT License |
 | Logo | [logo.png](logo.png) |
-| Source | `https://github.com/Malven31/cinematic-azeroth` (if public) |
-| Issues | `https://github.com/Malven31/cinematic-azeroth/issues` (same condition) |
+| Source | `https://github.com/Malven31/cinematic-azeroth` |
+| Issues | `https://github.com/Malven31/cinematic-azeroth/issues` |
 
 If the description editor has no Markdown mode, open `description.md` in a Markdown preview (VS Code: Ctrl+Shift+V) and copy the rendered text. The formatting comes along.
 

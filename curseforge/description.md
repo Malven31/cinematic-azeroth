@@ -57,7 +57,6 @@ Licence: MIT.
 
 ## Feedback
 
-Report bugs and suggest features in the comments on this page. For a bug, type /cinema debug while it shows, then /reload, and mention it: the details are saved in your SavedVariables folder, in CinematicAzeroth.lua.
+Report bugs and suggest features in the comments on this page, or on GitHub. For a bug, type /cinema debug while it shows, then /reload, and mention it: the details are saved in your SavedVariables folder, in CinematicAzeroth.lua.
 
-<!-- Once the GitHub repository is public, add here, at the bottom of the page as CurseForge requires:
-Source code and issue tracker: https://github.com/Malven31/cinematic-azeroth -->
+Source code and issue tracker: [github.com/Malven31/cinematic-azeroth](https://github.com/Malven31/cinematic-azeroth)
