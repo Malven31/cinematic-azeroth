@@ -71,7 +71,7 @@ To set it up:
 
 1. Create a CurseForge API token at <https://authors.curseforge.com/#/settings/api-tokens>, or reuse the one made for Kong UI Hider: a token belongs to the CurseForge account, not to a project.
 2. On GitHub, open this repository's Settings > Secrets and variables > Actions > New repository secret. Name it `CF_API_TOKEN` and paste the token. Secrets are per repository: Kong UI Hider's doesn't reach this one.
-3. **Leave CurseForge's own "package on tagged commit" option off.** With both on, every tag would be uploaded twice.
+3. **Leave CurseForge's own "package on tagged commit" option off, and never add CurseForge's webhook** (Settings > Webhooks on GitHub). That packaging only runs when the webhook calls it. With both, every tag would be uploaded twice, and CurseForge's copy would have no changelog. Linking the repository as the project's source is fine.
 4. **Dry run:** push to `main`, or on GitHub open Actions > Package > Run workflow. A green run means CurseForge accepts the token and the zip holds exactly what players should get. Nothing is uploaded.
 
 ## Releasing a version
