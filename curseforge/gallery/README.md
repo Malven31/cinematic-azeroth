@@ -10,16 +10,11 @@ Screenshots for the CurseForge gallery, and the animation for the description, g
 
 How it was made (2026-11-16), from the capture kept in `private/cinematic_azeroth-original.gif` (1902×970, 118 frames, 8.15 s, 112.9 MB):
 
-1. **Other players' names blurred.** In the first 11 frames, before cinematic mode hides them, players' names and guild tags show in the street. A 860×170 box at (250, 330) is blurred in those frames only. The minimap and the NPC names still visibly disappear.
+1. **Readable player names blurred, one by one.** In the first 11 frames, before cinematic mode hides them, other players' names and guild tags show in the street. Each readable one gets a small blurred box that follows it from frame to frame: Holyfeet Goon and its guild, the Ragnor / Stephanie / Emma group, Doi Gg, Renato Gallina. The far crowd's tiny names stay as they are, and so do the NPC names and the minimap, which visibly disappear.
 2. **10 fps, 720 px wide** (720×367): 82 frames, still 8.2 s, looping forever.
-3. The same two passes as Kong UI Hider's GIF: an `ffmpeg` palette pass (`palettegen=stats_mode=diff`, `paletteuse=diff_mode=rectangle`), then `magick in.gif -fuzz 4% -layers Optimize out.gif`. Result: **11.5 MB**.
+3. The same two passes as Kong UI Hider's GIF: an `ffmpeg` palette pass (`palettegen=stats_mode=diff`, `paletteuse=diff_mode=rectangle`), then `magick in.gif -fuzz 4% -layers Optimize out.gif`. Result: **11.6 MB**.
 
-The command, from the repository root:
-
-```powershell
-ffmpeg -i curseforge/gallery/private/cinematic_azeroth-original.gif -filter_complex "[0:v]split[base][tmp];[tmp]crop=860:170:250:330,boxblur=14:2[bl];[base][bl]overlay=250:330:enable='lte(n\,10)',fps=10,scale=720:-1:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=diff_mode=rectangle" palette.gif
-magick palette.gif -fuzz 4% -layers Optimize curseforge/gallery/cinematic_azeroth.gif
-```
+`powershell -File scripts/make-gif.ps1` does all three from the original. The box positions are listed there: measured one by one in frames 0 to 5, where the camera speeds up, and interpolated from frame 5 to frame 10.
 
 The size had to shrink, unlike Kong's. The camera moves in every frame, so almost every pixel changes, and the fuzz pass has little to drop: at full size the two passes only went from 112.9 MB to 97.4 MB. Other sizes measured, all without the blur:
 
