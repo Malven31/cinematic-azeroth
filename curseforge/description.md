@@ -7,8 +7,7 @@
 
 Made for **World of Warcraft: Forever**.
 
-<!-- Once the GIF is committed (see gallery/README.md):
-![Cinematic mode turning on: the interface fades away and the letterbox bars slide in](https://raw.githubusercontent.com/Malven31/cinematic-azeroth/main/curseforge/gallery/cinematic_azeroth.gif) -->
+![Cinematic mode turning on while running through a city: the interface and the names disappear, and the letterbox bars slide in](https://raw.githubusercontent.com/Malven31/cinematic-azeroth/main/curseforge/gallery/cinematic_azeroth.gif)
 
 ## What it does
 

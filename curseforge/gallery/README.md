@@ -6,9 +6,30 @@ Screenshots for the CurseForge gallery, and the animation for the description, g
 
 ## The animation
 
-`cinematic_azeroth.gif`: a few seconds of pressing the key in a pretty spot. The interface disappears, the bars slide in, the camera turns a little, then the key again and everything comes back. The description and the README load it from `https://raw.githubusercontent.com/Malven31/cinematic-azeroth/main/curseforge/gallery/cinematic_azeroth.gif`, so keep that name and keep the repository public. Their lines for it are commented out until the file exists.
+`cinematic_azeroth.gif` shows cinematic mode turning on while the character runs through a city. The interface and the names disappear, and the letterbox bars slide in. The description and the README show it under the introduction; the description loads it from `https://raw.githubusercontent.com/Malven31/cinematic-azeroth/main/curseforge/gallery/cinematic_azeroth.gif`, so keep that name and keep the repository public.
 
-Keep it under about 10 MB: an `ffmpeg` palette pass (`palettegen=stats_mode=diff`, `paletteuse=diff_mode=rectangle`), then `magick in.gif -fuzz 4% -layers Optimize out.gif`. That took Kong UI Hider's GIF from 60 MB to 9.6 MB at the same size and frame rate.
+How it was made (2026-11-16), from the capture kept in `private/cinematic_azeroth-original.gif` (1902×970, 118 frames, 8.15 s, 112.9 MB):
+
+1. **Other players' names blurred.** In the first 11 frames, before cinematic mode hides them, players' names and guild tags show in the street. A 860×170 box at (250, 330) is blurred in those frames only. The minimap and the NPC names still visibly disappear.
+2. **10 fps, 720 px wide** (720×367): 82 frames, still 8.2 s, looping forever.
+3. The same two passes as Kong UI Hider's GIF: an `ffmpeg` palette pass (`palettegen=stats_mode=diff`, `paletteuse=diff_mode=rectangle`), then `magick in.gif -fuzz 4% -layers Optimize out.gif`. Result: **11.5 MB**.
+
+The command, from the repository root:
+
+```powershell
+ffmpeg -i curseforge/gallery/private/cinematic_azeroth-original.gif -filter_complex "[0:v]split[base][tmp];[tmp]crop=860:170:250:330,boxblur=14:2[bl];[base][bl]overlay=250:330:enable='lte(n\,10)',fps=10,scale=720:-1:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=diff_mode=rectangle" palette.gif
+magick palette.gif -fuzz 4% -layers Optimize curseforge/gallery/cinematic_azeroth.gif
+```
+
+The size had to shrink, unlike Kong's. The camera moves in every frame, so almost every pixel changes, and the fuzz pass has little to drop: at full size the two passes only went from 112.9 MB to 97.4 MB. Other sizes measured, all without the blur:
+
+| Width | Frame rate | Size |
+|---|---|---|
+| 960 px | about 14.5 fps | 27 MB |
+| 960 px | 10 fps | 19.9 MB |
+| 800 px | about 14.5 fps | 19.1 MB |
+| 800 px | 10 fps | 14.1 MB |
+| 720 px | 10 fps | 11.4 MB |
 
 ## Screenshots
 

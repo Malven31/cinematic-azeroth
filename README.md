@@ -6,6 +6,8 @@ Press one key and Azeroth becomes a film: the whole interface and the nameplates
 
 Made for **World of Warcraft: Forever**.
 
+![Cinematic mode turning on while running through a city: the interface and the names disappear, and the letterbox bars slide in](curseforge/gallery/cinematic_azeroth.gif)
+
 - [Features](FEATURES.md): every option, explained.
 - [Changelog](CHANGELOG.md)
 
