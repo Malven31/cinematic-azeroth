@@ -10,11 +10,13 @@ Screenshots for the CurseForge gallery, and the animation for the description, g
 
 How it was made (2026-11-16), from the capture kept in `private/cinematic_azeroth-original.gif` (1902×970, 118 frames, 8.15 s, 112.9 MB):
 
-1. **Readable player names blurred, one by one.** In the first 11 frames, before cinematic mode hides them, other players' names and guild tags show in the street. Each readable one gets a small blurred box that follows it from frame to frame: Holyfeet Goon and its guild, the Ragnor / Stephanie / Emma group, Doi Gg, Renato Gallina. The far crowd's tiny names stay as they are, and so do the NPC names and the minimap, which visibly disappear.
+1. **Readable player names blurred, one by one,** wherever the interface shows. Each readable name, or group of names close together, gets a small blurred box that follows it from frame to frame. The far crowd's tiny names stay as they are, and so do the NPC names and the minimap, which visibly disappear and come back.
+   - **Frames 0 to 10**, before cinematic mode hides the names: 4 boxes (Holyfeet Goon and its guild, the Ragnor / Stephanie / Emma group, Doi Gg, Renato Gallina).
+   - **Frames 107 to 117**, after the interface comes back: 12 boxes. The camera is closer to the crowd, so more names can be read, the text is bigger, and those boxes blur more (sigma 7 to 9 instead of 4). One name, Sergette Heinikus, shows in frame 109 only.
 2. **10 fps, 720 px wide** (720×367): 82 frames, still 8.2 s, looping forever.
 3. The same two passes as Kong UI Hider's GIF: an `ffmpeg` palette pass (`palettegen=stats_mode=diff`, `paletteuse=diff_mode=rectangle`), then `magick in.gif -fuzz 4% -layers Optimize out.gif`. Result: **11.6 MB**.
 
-`powershell -File scripts/make-gif.ps1` does all three from the original. The box positions are listed there: measured one by one in frames 0 to 5, where the camera speeds up, and interpolated from frame 5 to frame 10.
+`powershell -File scripts/make-gif.ps1` does all three from the original. The box positions are listed there, as key frames measured on the capture with a straight line in between: every frame from 0 to 5, where the camera speeds up, and every two to five frames at the end, where some players move on their own and the camera pans left then right.
 
 The size had to shrink, unlike Kong's. The camera moves in every frame, so almost every pixel changes, and the fuzz pass has little to drop: at full size the two passes only went from 112.9 MB to 97.4 MB. Other sizes measured, all without the blur:
 
